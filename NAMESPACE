@@ -1,0 +1,4 @@
+export(Gene, proteinLength, print)
+
+S3method(proteinLength, Gene)
+S3method(print, Gene)
