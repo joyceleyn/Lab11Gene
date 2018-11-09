@@ -1,47 +1,34 @@
 \name{print.Gene}
 \alias{print.Gene}
+%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-print-Gene
+function to pring gene information
 }
 \description{
-This function prings out the Gene ID, Gene Symbol, and length of the gene in nucleotides and Amino acids~~
+this method prints gene information
 }
 \usage{
-\method{print}{Gene}(object, ...)
+\method{print}{Gene}(geneobject, ...)
 }
-
 \arguments{
   \item{object}{
-The list from the Gene function
+A gene object produced by the gene function
 }
   \item{\dots}{
-%%     ~~Describe \code{\dots} here~~
+other arguments
 }
 }
-
+\details{
+%%  ~~ If necessary, more details than the description above ~~
+}
 \value{
-prints to the screen the gene name, ID and Length of CDS
+the information is printed to the standart output
 }
 
-\author{
-Joyce Njuguna
-}
 
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
-##---- Should be DIRECTLY executable !! ----
+my_object <- Gene("gene00001", "XYZ", c(8020, 112, 900),
+               "ATGAAATAG")
+print(my_object) 
 
-## The function is currently defined as
-print.gene(object, ...) 
-{
-    cat(paste("Gene Id:", object$ID), paste("Symbol:", object$symbol), 
-        paste("Length in bp:", nchar(object$CDS)), paste("length in AA:", 
-            proteinLength(object)), sep = "\n")
-  }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

@@ -35,11 +35,11 @@ proteinLength.Gene <- function(object, ...){
 
 #print some information from the Gene object
 
-print.Gene <- function(object, ...){
-  cat(paste("Gene Id:", object$ID ),
-      paste("Symbol:",object$symbol),
-      paste("Length in bp:",nchar(object$CDS)),
-      paste("length in AA:",proteinLength(object)),
+print.Gene <- function(geneobject, ...){
+  cat(paste("Gene Id:", geneobject$ID ),
+      paste("Symbol:",geneobject$symbol),
+      paste("Length in bp:",nchar(geneobject$CDS)),
+      paste("length in AA:",proteinLength(geneobject)),
       sep = "\n")
 }
 
